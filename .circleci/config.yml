@@ -1,21 +1,55 @@
-# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
-# See: https://circleci.com/docs/orb-intro/
+#Setup the orbs
 orbs:
-  node: circleci/node@4.7
+  node: circleci/node@5.1.0
 
-# Invoke jobs via workflows
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/configuration-reference/#jobs
+jobs:
+  deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn build
+          name: Build app
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+      - store_artifacts:
+          path: ~/project/build
+          destination: build
+      - run:
+          name: Install LFTP
+          command: |
+            sudo apt update;
+            sudo apt install lftp;
+      - run:
+          name: add host to known values
+          #command: |
+          #  for ip in $(dig @8.8.8.8 $HOSTNAME +short); do ssh-keyscan $HOSTNAME,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+          # ssh-keyscan introduces potential MITM attack
+          command: |
+            ssh-keyscan -t rsa $HOSTNAME >> ~/.ssh/known_hosts;
+            cat ~/.ssh/known_hosts;
+
+      - run:
+          name: Deploy via SFTP
+          command: |
+            lftp sftp://$USERNAME:$PASSWORD@$HOSTNAME -e "mirror -R build/ /reabeldesign/; quit";
+
+# Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  deploy_reabelx:
     jobs:
-      - node/test:
-          # This is the node version to use for the `cimg/node` tag
-          # Relevant tags can be found on the CircleCI Developer Hub
-          # https://circleci.com/developer/images/image/cimg/node
-          version: '16.10'
-          # If you are using yarn, change the line below from "npm" to "yarn"
-          pkg-manager: npm
+      - deploy:
+          filters:
+            branches:
+              only: main # only build when on main
