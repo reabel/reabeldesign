@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+/* WIP: menubar in MUI doesn't support this kind of styling too easily */
+.topbar {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 68, 1) 74%, rgba(255, 0, 99, 0.6867121848739496) 100%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
