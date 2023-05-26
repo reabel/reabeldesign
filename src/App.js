@@ -15,7 +15,7 @@ function App() {
         </div>
       </body>
       <footer>
-        © <a href="http://reabelx.com">ReabelX</a> 2022
+        © <a href="http://reabelx.com">ReabelX</a> 2023
       </footer>
     </div>
   );
