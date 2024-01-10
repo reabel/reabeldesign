@@ -8,8 +8,12 @@ class Links extends Component {
           Blog
         </a>{" "}
         |{" "}
+        <a href="https://www.instagram.com/reabel/" _target="blank">
+          Photography
+        </a>{" "}
+        |{" "}
         <a href="https://twitter.com/reabel" _target="blank">
-          Twitter
+          Social
         </a>{" "}
         |{" "}
         <a
