@@ -1,10 +1,23 @@
+:root {
+  --theme1: rgba(140, 30, 39, 1);
+  --theme2: rgba(89, 27, 32, 1);
+  --theme3: rgb(1, 32, 32);
+  --theme4: rgba(216, 36, 36, 1);
+  --theme5: rgba(242, 242, 242, 1);
+}
+
 .App {
   text-align: center;
+  color: var(--theme5);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.main-body {
+  background-color: var(--theme3);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +27,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,23 +36,48 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reabelx {
+  background-color: rgb(0,0,0,0);
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a, NavLink {
+  background-color: var(--theme2);
+  color: var(--theme5);
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--theme1);
+  text-decoration: underline;
 }
 
 /* WIP: menubar in MUI doesn't support this kind of styling too easily */
 body {
-  background: rgb(2, 0, 36);
-  color: whitesmoke
-  /* background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 68, 1) 74%, rgba(255, 0, 99, 0.6867121848739496) 100%); */
+  background-color: var(--theme3);
 }
 h1 {
   font-family: fantasy;
   font-stretch: expanded;
   font-weight: lighter;
-  color: #61dafb;
-  text-shadow: green;
+  color: var(--theme5);
 }
+
+/* a {
+  color: #61dafb;
+  background: rgb(13, 7, 113);
+} */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -49,3 +86,41 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+#experiments {
+  margin: 5%;
+  display: flex;
+  align-self: center;
+  /* min-height: 50vh; */
+}
+
+.experi-box {
+  width: 50%;
+  background-color: rgba(245, 245, 220, 0.59);
+}
+
+.experi-nfo {
+  width: 50%;
+  background-color: rgba(222, 184, 135, 0.779);
+}
+
+/* Color Theme Swatches in Hex */
+.Samuel-Alexander-AW19-Collection-1-hex { color: #8C1F28; }
+.Samuel-Alexander-AW19-Collection-2-hex { color: #591C21; }
+.Samuel-Alexander-AW19-Collection-3-hex { color: #044040; }
+.Samuel-Alexander-AW19-Collection-4-hex { color: #D92525; }
+.Samuel-Alexander-AW19-Collection-5-hex { color: #F2F2F2; }
+
+/* Color Theme Swatches in RGBA */
+.Samuel-Alexander-AW19-Collection-1-rgba { color: rgba(140, 30, 39, 1); }
+.Samuel-Alexander-AW19-Collection-2-rgba { color: rgba(89, 27, 32, 1); }
+.Samuel-Alexander-AW19-Collection-3-rgba { color: rgba(3, 63, 63, 1); }
+.Samuel-Alexander-AW19-Collection-4-rgba { color: rgba(216, 36, 36, 1); }
+.Samuel-Alexander-AW19-Collection-5-rgba { color: rgba(242, 242, 242, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Samuel-Alexander-AW19-Collection-1-hsla { color: hsla(354, 63, 33, 1); }
+.Samuel-Alexander-AW19-Collection-2-hsla { color: hsla(354, 52, 22, 1); }
+.Samuel-Alexander-AW19-Collection-3-hsla { color: hsla(180, 88, 13, 1); }
+.Samuel-Alexander-AW19-Collection-4-hsla { color: hsla(0, 70, 49, 1); }
+.Samuel-Alexander-AW19-Collection-5-hsla { color: hsla(0, 0, 95, 1); }
