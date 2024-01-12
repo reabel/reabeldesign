@@ -14,6 +14,11 @@ function App() {
           <h1>ReabelDesign</h1>
           <Links />
           <BrowserRouter>
+            <nav>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/guides">Guides</NavLink>
+            </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
