@@ -3,18 +3,18 @@ class Links extends Component {
   render() {
     return (
         <>
-          <a href="http://blog.reabelx.com" _target="blank">
+          <a href="http://blog.reabelx.com" target="blank">
             Blog
           </a>
-          <a href="https://www.instagram.com/reabel/" _target="blank">
+          <a href="https://www.instagram.com/reabel/" target="blank">
             Photography
           </a>
-          <a href="https://twitter.com/reabel" _target="blank">
+          <a href="https://twitter.com/reabel" target="blank">
             Social
           </a>
           <a
             href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
-            _target="blank"
+            target="blank"
           >
             LinkedIn
           </a>

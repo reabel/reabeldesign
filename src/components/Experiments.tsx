@@ -3,10 +3,10 @@ class Experiments extends Component {
   render() {
     return (
       <div id="experiments">
-        <div class="experi-box">
+        <div className="experi-box">
             Test
         </div>
-        <div class="experi-nfo">
+        <div className="experi-nfo">
             Test
         </div>
       </div>
