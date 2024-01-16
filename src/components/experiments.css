@@ -1,0 +1,35 @@
+/* Main CSS for experiments*/
+
+.experi-container {
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: center;
+    /* min-height: 50vh; */
+}
+
+.experi-box {
+    margin: 5%;
+    min-height: 50px;
+    width: 50%;
+    background-color: rgba(245, 245, 220, 0.59);
+}
+
+.experi-nfo {
+    margin: 5%;
+    width: 50%;
+    background-color: rgba(222, 184, 135, 0.779);
+}
+
+/* Individual Styling */
+
+
+.shadow {
+    /* filter: drop-shadow(0 0 0.75rem crimson); */
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+.shadow2 {
+    filter: drop-shadow(30px 10px 4px #4444dd);
+}
