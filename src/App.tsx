@@ -6,10 +6,7 @@ import Home from "./components/Home";
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
-  const Home = () => (<span>
-  </span>);
   return (
-    
     <div className="App">
         <div className="main-body">
           <h1>ReabelDesign</h1>
