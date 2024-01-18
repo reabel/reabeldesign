@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-        <div className="main-body">
+        <div className="main-content">
           <h1>ReabelDesign</h1>
           <BrowserRouter>
             <nav class="nav">
@@ -22,9 +22,9 @@ function App() {
             </Routes>
           </BrowserRouter>
         </div>
-      <footer>
-        © <a class="reabelx" href="http://reabelx.com">ReabelX</a> 2024
-      </footer>
+        <footer>
+          © <a class="reabelx" href="http://reabelx.com">ReabelX</a> 2024
+        </footer>
     </div>
   );
 }
