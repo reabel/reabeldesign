@@ -1,16 +1,12 @@
 import "./App.css";
 import Links from "./components/Links";
 import Experiments from "./components/Experiments";
+import Home from "./components/Home";
 
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
   const Home = () => (<span>
-    Hi! I'm Ryan, a Full Stack Developer from Ontario, Canada. This site is designed to be a 
-    portolio portal for various experiments and projects that I have in progress.
-
-    This site is a work-in-progress and I full expect it to change a few times over the course of the following weeks.
-
   </span>);
   return (
     
