@@ -11,7 +11,7 @@
   --theme2: rgb(2, 154, 45);
   --theme3: rgb(1, 32, 32);
   --theme4: rgba(216, 36, 36, 1);
-  --theme5: rgba(242, 242, 242, 1);
+  --theme5: rgb(27, 22, 22);
 }
 
 .App {
@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 .reabelx {
@@ -46,7 +46,7 @@
   padding: 0;
 }
 
-.nav {
+/* .nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,12 +60,12 @@ a, NavLink {
   margin: 5px;
   padding: 5px 10px;
   text-decoration: none;
-}
+} */
 
-a:hover {
+/* a:hover {
   background-color: var(--theme1);
   text-decoration: underline;
-}
+} */
 
 /* WIP: menubar in MUI doesn't support this kind of styling too easily */
 body {
@@ -76,12 +76,11 @@ body {
   min-height: calc(100vh - 80px);
 }
 
-h1 {
-  font-family: fantasy;
+/* h1 {
   font-stretch: expanded;
   font-weight: lighter;
   color: var(--theme5);
-}
+} */
 
 /* a {
   color: #61dafb;
