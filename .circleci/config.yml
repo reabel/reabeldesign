@@ -16,7 +16,7 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm build
+          command: npm run build
           name: Build app
       - persist_to_workspace:
           root: ~/project
@@ -32,7 +32,7 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm build
+          command: npm run build
           name: Build app
       - persist_to_workspace:
           root: ~/project
