@@ -1,6 +1,14 @@
-:root {
+/* :root {
   --theme1: rgba(140, 30, 39, 1);
   --theme2: rgba(89, 27, 32, 1);
+  --theme3: rgb(1, 32, 32);
+  --theme4: rgba(216, 36, 36, 1);
+  --theme5: rgba(242, 242, 242, 1);
+} */
+
+:root {
+  --theme1: rgba(12, 145, 40, 1);
+  --theme2: rgb(2, 154, 45);
   --theme3: rgb(1, 32, 32);
   --theme4: rgba(216, 36, 36, 1);
   --theme5: rgba(242, 242, 242, 1);
@@ -14,10 +22,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-.main-body {
-  background-color: var(--theme3);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -65,8 +69,13 @@ a:hover {
 
 /* WIP: menubar in MUI doesn't support this kind of styling too easily */
 body {
-  background-color: var(--theme3);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,24,60,1) 38%, rgba(25,35,46,1) 96%);
 }
+
+.main-content {
+  min-height: calc(100vh - 80px);
+}
+
 h1 {
   font-family: fantasy;
   font-stretch: expanded;
