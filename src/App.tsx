@@ -30,12 +30,14 @@ const theme = extendTheme({
   },
 });
 
+
+
 function App() {
   return (
     <ChakraProvider theme={theme} >
       <div className="App">
           <div className="main-content">
-            <Heading as='h1' size='4xl' colorScheme="whatsapp"><image src={logo} alt="Logo"/></Heading>
+            <Heading as='h1' size='4xl' colorScheme="whatsapp"><img src={logo} className='logo' alt="Logo"/></Heading>
             <BrowserRouter>
               <Links />
               <Routes>
