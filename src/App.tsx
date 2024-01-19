@@ -4,6 +4,7 @@ import Links from "./components/Links";
 import Experiments from "./components/Experiments";
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import logo from "./rdsmall.png";
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -34,7 +35,7 @@ function App() {
     <ChakraProvider theme={theme} >
       <div className="App">
           <div className="main-content">
-            <Heading as='h1' size='4xl' colorScheme="whatsapp">ReabelDesign</Heading>
+            <Heading as='h1' size='4xl' colorScheme="whatsapp"><image src={logo} alt="Logo"/></Heading>
             <BrowserRouter>
               <Links />
               <Routes>
