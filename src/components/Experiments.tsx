@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, CardFooter, Text, Code } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import './experiments.css';
 type Experiment = {
   name: String;
@@ -24,16 +25,16 @@ const listFonts = fonts.map((font: Experiment, index) => {
       <div className="experi-nfo">
           {font.name}: {font.className}
   </div> */}
-      <Card align="center" size="lg" colorScheme="red">
+      <Card align="center" size="lg" style={{margin: "10px"}}>
         <CardBody>
           <div className={font.className}>
-          {font.value}
+          {font.value} HTML
           </div>
         </CardBody>
       </Card>
-      <Card size="lg" variant="filled">
+      <Card size="lg" variant="filled" style={{margin: "10px"}}>
         <CardBody>
-          <div >style: <Code colorScheme="whatsapp">{font.style}</Code></div>
+          <div ><Code colorScheme="whatsapp">{font.style}</Code></div>
         </CardBody>
       </Card>
     </div>
@@ -45,7 +46,25 @@ class Experiments extends Component {
   render() {
     return (
       <div>
-        {listFonts}
+        <Tabs size='md' align="center">
+          <TabList>
+            <Tab>HTML</Tab>
+            <Tab>CSS</Tab>
+            <Tab>JS</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <p>HTML</p>
+            </TabPanel>
+            <TabPanel>
+              <p>CSS</p>
+            </TabPanel>
+            <TabPanel>
+              <p>JS</p>
+            </TabPanel>
+            {listFonts}
+          </TabPanels>
+        </Tabs>
       </div>
     );
   }
