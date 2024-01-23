@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
 }
 
 .reabelx {
@@ -46,28 +45,6 @@
   padding: 0;
 }
 
-/* .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-a, NavLink {
-  background-color: var(--theme2);
-  color: var(--theme5);
-  font-weight: bold;
-  border-radius: 3px;
-  margin: 5px;
-  padding: 5px 10px;
-  text-decoration: none;
-} */
-
-/* a:hover {
-  background-color: var(--theme1);
-  text-decoration: underline;
-} */
-
-/* WIP: menubar in MUI doesn't support this kind of styling too easily */
 body {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,24,60,1) 38%, rgba(25,35,46,1) 96%);
 }
@@ -80,17 +57,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
 }
-/* h1 {
-  font-stretch: expanded;
-  font-weight: lighter;
-  color: var(--theme5);
-} */
 
-/* a {
-  color: #61dafb;
-  background: rgb(13, 7, 113);
-} */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
