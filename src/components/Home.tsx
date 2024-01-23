@@ -7,6 +7,7 @@ class Home extends Component {
         <Text id="home"
           fontSize="xl"
           fontWeight="bold"
+          style={{margin: "5% 10%"}}
         >
           Hi! I'm Ryan, a Full Stack Developer from Ontario, Canada. This site is designed to be a 
           portolio portal for various experiments and projects that I have in progress. It's a work-in-progress and 
