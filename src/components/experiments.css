@@ -1,7 +1,7 @@
 /* Main CSS for experiments*/
 
 .experi-container {
-    margin: 5%;
+    margin: 0 5% 0 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

@@ -18,13 +18,6 @@ const fonts: Array<Experiment> = [
 const listFonts = fonts.map((font: Experiment, index) => {
   return (
     <div key={ font.name + index.toString() } className="experi-container">
-      {/* <div className="experi-box">
-        <div className={font.className}>
-        </div>
-      </div>
-      <div className="experi-nfo">
-          {font.name}: {font.className}
-  </div> */}
       <Card align="center" size="lg" style={{margin: "10px"}}>
         <CardBody>
           <div className={font.className}>
