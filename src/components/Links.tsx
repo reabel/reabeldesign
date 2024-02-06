@@ -1,4 +1,5 @@
-import { Button, ButtonGroup, LinkOverlay } from '@chakra-ui/react'
+import { Button, ButtonGroup, LinkOverlay, Menu, MenuItem, MenuButton, MenuList } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom';
 const Links = () => {
   
@@ -21,22 +22,30 @@ const Links = () => {
           Blog
         </LinkOverlay>
       </Button>
+      {/* TOOD: Instead of linking to instagram, create an internal page w/ a photo grid */}
       <Button colorScheme='whatsapp'>
         <LinkOverlay href="https://www.instagram.com/reabel/" target="blank">
           Photography
         </LinkOverlay>
       </Button>
-      <Button colorScheme='whatsapp'>
-        <LinkOverlay href="https://twitter.com/reabel" target="blank">
-        Social
-        </LinkOverlay>
-      </Button>
-      <Button colorScheme='whatsapp'>
-        <LinkOverlay href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
-        target="blank">
-          LinkedIn
-        </LinkOverlay>
-      </Button>
+      <Menu>
+        <MenuButton as={Button} colorScheme='whatsapp' rightIcon={<ChevronDownIcon />}>
+          Social
+        </MenuButton>
+        <MenuList>
+          <MenuItem>
+            <LinkOverlay href="https://twitter.com/reabel" target="blank">
+            Twitter
+            </LinkOverlay>
+          </MenuItem>
+          <MenuItem >
+            <LinkOverlay href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
+            target="blank">
+              LinkedIn
+            </LinkOverlay>
+          </MenuItem>
+        </MenuList>
+      </Menu>
     </ButtonGroup>
   );
 }
