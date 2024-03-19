@@ -1,35 +1,12 @@
 import "./App.css";
-import { ChakraProvider, extendTheme, Heading, Link } from "@chakra-ui/react";
+import { ChakraProvider, Heading, Link } from "@chakra-ui/react";
 import Links from "./components/Links";
 import Experiments from "./components/Experiments";
 import Projects from "./components/Projects";
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import logo from "./rdsmall.png";
-
-const theme = extendTheme({
-  initialColorMode: "dark",
-  textStyles: {
-    h1: {
-      // you can also use responsive styles
-      fontSize: ["48px", "72px"],
-      fontWeight: "bold",
-      lineHeight: "110%",
-      letterSpacing: "-2%",
-    },
-    h2: {
-      fontSize: ["36px", "48px"],
-      fontWeight: "semibold",
-      lineHeight: "110%",
-      letterSpacing: "-1%",
-    },
-  },
-  brand: {
-    900: "#0c9128",
-    800: "#012020",
-    700: "#d82424;",
-  },
-});
+import theme from "./theme";
 
 function App() {
   return (

@@ -29,7 +29,7 @@ export default function ProjectCard(props: PCProps) {
             <Box>
               <Heading size="xs" textTransform="uppercase" style={linkStyle}>
                 {props.links.map((link, index) => (
-                  <div key="link.key">
+                  <div key={link.key}>
                     <a href={link.url} target="_blank">
                       {link.key}
                     </a>
