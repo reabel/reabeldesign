@@ -29,7 +29,8 @@ const Links = () => {
         onClick={() => {
           navigate("/");
         }}
-        colorScheme="whatsapp"
+        backgroundColor="red.800"
+        color="white"
         variant="solid"
       >
         Home
