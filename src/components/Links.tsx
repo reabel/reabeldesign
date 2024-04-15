@@ -7,6 +7,8 @@ import {
   MenuItem,
   MenuButton,
   MenuList,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaLinkedin, FaFlickr, FaInstagram } from "react-icons/fa"; //https://react-icons.github.io/react-icons/#/
@@ -19,6 +21,7 @@ const Links = () => {
     flexDirection: "row",
     justifyContent: "flex-start",
   };
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <ButtonGroup isAttached>
       {/* <nav class="nav">
@@ -71,6 +74,7 @@ const Links = () => {
             <Link
               href="https://www.instagram.com/reabel/"
               target="blank"
+              color={useColorModeValue("black", "white")}
               isExternal
             >
               <div style={linkStyle}>
@@ -82,6 +86,7 @@ const Links = () => {
             <Link
               href="https://www.flickr.com/photos/reabel/"
               target="blank"
+              color={useColorModeValue("black", "white")}
               isExternal
             >
               <div style={linkStyle}>
@@ -101,7 +106,12 @@ const Links = () => {
         </MenuButton>
         <MenuList>
           <MenuItem>
-            <Link href="https://twitter.com/reabel" target="blank" isExternal>
+            <Link
+              href="https://twitter.com/reabel"
+              target="blank"
+              color={useColorModeValue("black", "white")}
+              isExternal
+            >
               <div style={linkStyle}>
                 <FaXTwitter /> Twitter
               </div>
@@ -111,6 +121,7 @@ const Links = () => {
             <Link
               href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
               target="blank"
+              color={useColorModeValue("black", "white")}
               isExternal
             >
               <div style={linkStyle}>
@@ -119,6 +130,13 @@ const Links = () => {
             </Link>
           </MenuItem>
         </MenuList>
+        <Button
+          colorScheme="whatsapp"
+          variant="solid"
+          onClick={toggleColorMode}
+        >
+          Toggle {colorMode === "light" ? "Dark" : "Light"}
+        </Button>
       </Menu>
     </ButtonGroup>
   );
