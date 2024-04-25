@@ -32,8 +32,8 @@ const canvasHTML = (
 //Could use an extendsion here
 const listHtml = fonts.map((font: Experiment, index) => {
     return (
-      <TabPanel alignItems='center'>
-        <div key={ font.name + index.toString() } className="experi-container">
+      <TabPanel key={ font.name + index.toString() }  alignItems='center'>
+        <div className="experi-container">
           <Card align="center" size="lg" style={{margin: "10px"}}>
             <CardBody>
               <p> A Sample of the <code> code tag. </code></p>
