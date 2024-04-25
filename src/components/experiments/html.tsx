@@ -32,20 +32,23 @@ const canvasHTML = (
 //Could use an extendsion here
 const listHtml = fonts.map((font: Experiment, index) => {
     return (
-      <div key={ font.name + index.toString() } className="experi-container">
-        <Card align="center" size="lg" style={{margin: "10px"}}>
-          <CardBody>
-            <p> A Sample of the <code> code tag. </code></p>
-          </CardBody>
-        </Card>
-        <Card size="lg" variant="filled" style={{margin: "10px"}}>
-          <CardBody>
-            <div ><Code colorScheme="whatsapp">{`
-            <code> Code </code>
-            `}</Code></div>
-          </CardBody>
-        </Card>
-      </div>
+      <TabPanel alignItems='center'>
+        <div key={ font.name + index.toString() } className="experi-container">
+          <Card align="center" size="lg" style={{margin: "10px"}}>
+            <CardBody>
+              <p> A Sample of the <code> code tag. </code></p>
+            </CardBody>
+          </Card>
+          <Card size="lg" variant="filled" style={{margin: "10px"}}>
+            <CardBody>
+              <div ><Code colorScheme="whatsapp">{`
+              <code> Code </code>
+              `}</Code></div>
+            </CardBody>
+          </Card>
+        </div>
+      </TabPanel>
+      
     );
       
   })

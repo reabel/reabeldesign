@@ -1,11 +1,8 @@
 import "./App.css";
 import {
   ChakraProvider,
-  Link,
-  useColorModeValue,
-  Text,
-  useColorMode,
-  Button,
+  Box,
+  Center,
 } from "@chakra-ui/react";
 import Links from "./components/Links";
 import Bottom from "./components/Bottom";
@@ -40,10 +37,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
  */
 
 export default function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <ChakraProvider>
       <div className="App">
+        <div className='pattern'></div>
         <div className="main-content">
           <BrowserRouter>
             <Links />

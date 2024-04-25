@@ -1,7 +1,7 @@
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Card, Text, useColorModeValue } from "@chakra-ui/react";
 export default function Home() {
   return (
-    <>
+    <Card>
       <Text
         id="home"
         fontSize="xl"
@@ -15,6 +15,6 @@ export default function Home() {
         <br />
         ReabelDesign is currently built on React with Typescript.
       </Text>
-    </>
+    </Card>
   );
 }
