@@ -27,7 +27,7 @@ const Links = () => {
   const { toggleColorMode } = useColorMode();
   return (
     <>
-      <Heading as="h1" size="4xl" colorScheme="whatsapp">
+      <Heading as="h1" size="4xl" colorScheme="red">
         <img
           src={logo}
           className="logo"
@@ -46,7 +46,7 @@ const Links = () => {
           onClick={() => {
             navigate("/");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Home
@@ -55,7 +55,7 @@ const Links = () => {
           onClick={() => {
             navigate("/projects");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Projects
@@ -64,12 +64,12 @@ const Links = () => {
           onClick={() => {
             navigate("/experiments");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Experiments
         </Button>
-        <Button colorScheme="whatsapp" variant="solid">
+        <Button colorScheme="red" variant="solid">
           <LinkOverlay href="http://blog.reabelx.com" target="blank">
             Blog
           </LinkOverlay>
@@ -78,7 +78,7 @@ const Links = () => {
         <Menu>
           <MenuButton
             as={Button}
-            colorScheme="whatsapp"
+            colorScheme="red"
             rightIcon={<ChevronDownIcon />}
           >
             Photography
@@ -92,7 +92,7 @@ const Links = () => {
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaInstagram /> Instagram
+                  <FaInstagram style={{ marginTop: "4px", marginRight: "4px"}} /> Instagram
                 </div>
               </Link>
             </MenuItem>
@@ -104,7 +104,7 @@ const Links = () => {
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaFlickr /> Flickr
+                  <FaFlickr style={{ marginTop: "4px", marginRight: "4px"}} /> Flickr
                 </div>
               </Link>
             </MenuItem>
@@ -113,7 +113,7 @@ const Links = () => {
         <Menu>
           <MenuButton
             as={Button}
-            colorScheme="whatsapp"
+            colorScheme="red"
             rightIcon={<ChevronDownIcon />}
           >
             Social
@@ -127,7 +127,7 @@ const Links = () => {
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaXTwitter /> Twitter
+                  <FaXTwitter style={{ marginTop: "4px", marginRight: "4px"}} /> Twitter
                 </div>
               </Link>
             </MenuItem>
@@ -139,13 +139,13 @@ const Links = () => {
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaLinkedin /> LinkedIn
+                  <FaLinkedin style={{ marginTop: "4px", marginRight: "4px"}} /> LinkedIn
                 </div>
               </Link>
             </MenuItem>
           </MenuList>
           <Button
-            colorScheme="whatsapp"
+            colorScheme="red"
             variant="solid"
             onClick={toggleColorMode}
           >
