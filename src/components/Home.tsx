@@ -1,5 +1,17 @@
-import { Card, Text, useColorModeValue } from "@chakra-ui/react";
+import { Card, Text, useColorModeValue, Link } from "@chakra-ui/react";
 export default function Home() {
+
+  const github = (
+    <Link
+    color={useColorModeValue("red.800", "red.200")}
+    href="https://github.com/reabel"
+    target="blank"
+    isExternal
+   >
+    GitHub
+    </Link>
+  )
+
   return (
     <Card>
       <Text
@@ -10,8 +22,9 @@ export default function Home() {
       >
         Hi! I'm Ryan, a Full Stack Developer from Ontario, Canada. This site is
         designed to be a portolio portal for various experiments and projects
-        that I have in progress. It's a work-in-progress and I full expect it to
-        change a few times over the course of the following weeks. <br />
+        that I have in progress. It's an evolving site, so feel free to take a look at my
+        {' '}{github}{' '}
+        in the meantime. <br />
         <br />
         ReabelDesign is currently built on React with Typescript.
       </Text>
