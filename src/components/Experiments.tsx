@@ -4,6 +4,7 @@ import {
   TabPanels,
   Tab,
   useColorModeValue,
+  Heading,
 } from "@chakra-ui/react";
 import ExpermentsHtml from "./experiments/html";
 import ExpermentsCSS from "./experiments/css";
@@ -13,6 +14,7 @@ import "./experiments.css";
 const Experiments = () => {
   return (
     <div>
+      <Heading size="lg" style={{marginTop: '20px'}}>Experiments</Heading>
       <Tabs size="md" align="center">
         <TabList>
           <Tab color={useColorModeValue("black", "white")}>HTML</Tab>

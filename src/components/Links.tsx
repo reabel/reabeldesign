@@ -27,7 +27,7 @@ const Links = () => {
   const { toggleColorMode } = useColorMode();
   return (
     <>
-      <Heading as="h1" size="4xl" colorScheme="whatsapp">
+      <Heading as="h1" size="4xl" colorScheme="red">
         <img
           src={logo}
           className="logo"
@@ -37,6 +37,7 @@ const Links = () => {
           alt="Logo"
         />
       </Heading>
+      {/* TODO: Add current route as highlighted */}
       <ButtonGroup isAttached>
         {/* <nav class="nav">
         <NavLink to="/">Home</NavLink>
@@ -46,7 +47,7 @@ const Links = () => {
           onClick={() => {
             navigate("/");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Home
@@ -55,7 +56,7 @@ const Links = () => {
           onClick={() => {
             navigate("/projects");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Projects
@@ -64,12 +65,12 @@ const Links = () => {
           onClick={() => {
             navigate("/experiments");
           }}
-          colorScheme="whatsapp"
+          colorScheme="red"
           variant="solid"
         >
           Experiments
         </Button>
-        <Button colorScheme="whatsapp" variant="solid">
+        <Button colorScheme="red" variant="solid">
           <LinkOverlay href="http://blog.reabelx.com" target="blank">
             Blog
           </LinkOverlay>
@@ -78,7 +79,7 @@ const Links = () => {
         <Menu>
           <MenuButton
             as={Button}
-            colorScheme="whatsapp"
+            colorScheme="red"
             rightIcon={<ChevronDownIcon />}
           >
             Photography
@@ -87,24 +88,22 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://www.instagram.com/reabel/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaInstagram /> Instagram
+                  <FaInstagram style={{ marginTop: "4px", marginRight: "4px"}} /> Instagram
                 </div>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link
                 href="https://www.flickr.com/photos/reabel/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaFlickr /> Flickr
+                  <FaFlickr style={{ marginTop: "4px", marginRight: "4px"}} /> Flickr
                 </div>
               </Link>
             </MenuItem>
@@ -113,7 +112,7 @@ const Links = () => {
         <Menu>
           <MenuButton
             as={Button}
-            colorScheme="whatsapp"
+            colorScheme="red"
             rightIcon={<ChevronDownIcon />}
           >
             Social
@@ -122,30 +121,28 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://twitter.com/reabel"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaXTwitter /> Twitter
+                  <FaXTwitter style={{ marginTop: "4px", marginRight: "4px"}} /> Twitter
                 </div>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link
                 href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
                 <div style={linkStyle}>
-                  <FaLinkedin /> LinkedIn
+                  <FaLinkedin style={{ marginTop: "4px", marginRight: "4px"}} /> LinkedIn
                 </div>
               </Link>
             </MenuItem>
           </MenuList>
           <Button
-            colorScheme="whatsapp"
+            colorScheme="red"
             variant="solid"
             onClick={toggleColorMode}
           >
