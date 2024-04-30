@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
+import { Heading } from "@chakra-ui/react";
 
 class Projects extends Component {
   render() {
     return (
       <>
+        <Heading size="lg" style={{marginTop: '20px'}}>Projects</Heading>
         <ProjectCard
           title={"Knowledge Base"}
           links={[{ key: "Github", url: "https://github.com/reabel/reabs-KB" }]}

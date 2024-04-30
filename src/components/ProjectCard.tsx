@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody } from "@chakra-ui/react";
+import { Card, CardHeader, CardBody, Link, useColorModeValue } from "@chakra-ui/react";
 import { Text, Heading, Stack, StackDivider, Box } from "@chakra-ui/react";
 
 interface PCProps {
@@ -20,7 +20,7 @@ const linkStyle: any = {
 export default function ProjectCard(props: PCProps) {
   return (
     <div>
-      <Card>
+      <Card align="center" size="md" style={{margin: "50px"}}>
         <CardHeader>
           <Heading size="md">{props.title}</Heading>
         </CardHeader>
@@ -29,10 +29,10 @@ export default function ProjectCard(props: PCProps) {
             <Box>
               <Heading size="xs" textTransform="uppercase" style={linkStyle}>
                 {props.links.map((link, index) => (
-                  <div key="link.key">
-                    <a href={link.url} target="_blank">
+                  <div key={link.key}>
+                    <Link color={useColorModeValue("red.800", "red.200")} href={link.url} isExternal>
                       {link.key}
-                    </a>
+                    </Link>
                     {index < props.links.length - 1 ? " | " : ""}
                   </div>
                 ))}

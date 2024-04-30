@@ -37,6 +37,7 @@ const Links = () => {
           alt="Logo"
         />
       </Heading>
+      {/* TODO: Add current route as highlighted */}
       <ButtonGroup isAttached>
         {/* <nav class="nav">
         <NavLink to="/">Home</NavLink>
@@ -87,7 +88,6 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://www.instagram.com/reabel/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
@@ -99,7 +99,6 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://www.flickr.com/photos/reabel/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
@@ -122,7 +121,6 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://twitter.com/reabel"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >
@@ -134,7 +132,6 @@ const Links = () => {
             <MenuItem>
               <Link
                 href="https://www.linkedin.com/in/ryan-reabel-a7a33712/"
-                target="blank"
                 color={useColorModeValue("black", "white")}
                 isExternal
               >

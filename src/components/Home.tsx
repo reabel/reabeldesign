@@ -5,7 +5,6 @@ export default function Home() {
     <Link
     color={useColorModeValue("red.800", "red.200")}
     href="https://github.com/reabel"
-    target="blank"
     isExternal
    >
     GitHub
