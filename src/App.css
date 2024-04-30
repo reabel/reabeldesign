@@ -87,16 +87,16 @@ body {
 }
 
 /* Background CSS Test from https://www.magicpattern.design/tools/css-backgrounds*/
+/* Added z-index so that text would render on top */
 .pattern {
+  z-index: -1;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  
   background-color: #86d4a3;
-opacity: 0.1;
-/* background-image:  linear-gradient(#151ef5 1.8px, transparent 1.8px), linear-gradient(to right, #151ef5 1.8px, #ffffff 1.8px); */
-background: linear-gradient(135deg, #bf0d0d55 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #bf4e0d 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #bf570d55 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #bf370d 25%, #e5e5f7 25%) 0px 0/ 80px 80px;
-background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+  opacity: 0.1;
+  background: linear-gradient(135deg, #bf0d0d55 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #bf4e0d 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #bf570d55 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #bf370d 25%, #e5e5f7 25%) 0px 0/ 80px 80px;
+  background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
 }
 
 /* Color Theme Swatches in Hex */

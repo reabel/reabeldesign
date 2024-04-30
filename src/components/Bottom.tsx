@@ -12,6 +12,8 @@ const Bottom = () => {
         <Link
           color={useColorModeValue("red.800", "red.200")}
           href="http://reabelx.com"
+          target="blank"
+          isExternal
         >
           ReabelX
         </Link>{" "}
