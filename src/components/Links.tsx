@@ -14,7 +14,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaLinkedin, FaFlickr, FaInstagram } from "react-icons/fa"; //https://react-icons.github.io/react-icons/#/
 import { CgDarkMode } from "react-icons/cg";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaGithub } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import logo from "../rdsmall.png";
 const Links = () => {
@@ -118,6 +118,17 @@ const Links = () => {
             Social
           </MenuButton>
           <MenuList>
+            <MenuItem>
+              <Link
+                href="https://github.com/reabel"
+                color={useColorModeValue("black", "white")}
+                isExternal
+              >
+                <div style={linkStyle}>
+                  <FaGithub style={{ marginTop: "4px", marginRight: "4px"}} /> Github
+                </div>
+              </Link>
+            </MenuItem>
             <MenuItem>
               <Link
                 href="https://twitter.com/reabel"
