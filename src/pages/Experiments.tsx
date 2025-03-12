@@ -6,10 +6,10 @@ import {
   useColorModeValue,
   Heading,
 } from "@chakra-ui/react";
-import ExpermentsHtml from "./experiments/html";
-import ExpermentsCSS from "./experiments/css";
-import ExpermentsJS from "./experiments/js";
-import "./experiments.css";
+import ExpermentsHtml from "../components/experiments/html";
+import ExpermentsCSS from "../components/experiments/css";
+import ExpermentsJS from "../components/experiments/js";
+import "../components/experiments.css";
 
 const Experiments = () => {
   return (
