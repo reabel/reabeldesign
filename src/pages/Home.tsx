@@ -20,7 +20,7 @@ export default function Home() {
         color={useColorModeValue("black", "white")}
       >
         Hi! I'm Ryan, a Full Stack Developer from Ontario, Canada. This site is
-        designed to be a portolio portal for various experiments and projects
+        designed as a portfolio & portal for various experiments and projects
         that I have in progress. It's an evolving site, so feel free to take a look at my
         {' '}{github}{' '}
         in the meantime. <br />
